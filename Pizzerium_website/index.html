@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizzerium - zjedz swoją wymarzoną pizzę</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/hero.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/nav.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main-functions.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/about-us.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="fontello-about-us/css/fontello.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/all-functions.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/cookies.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/game.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/footer.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Mali:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="icon" 
+    type="image/png" 
+    href="https://img.icons8.com/color/48/000000/pizza.png">  
+    <link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png">   
+  </head>
+
+<body>
+
+  <div class="website">
+    <nav class="main-nav" role="navigation">
+      <div class="main-nav__container">
+        <div class="logo-container">
+          <img class="logo-container__logo" src="img/logo-txt.svg" alt="pizzerium logo">
+        </div>
+        <div class="nav-toggle">
+          <input class="nav-toggle__input" type="checkbox" />
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
+          <ul class="menu-desktop menu-device">
+            <li class="menu__element menu__element-main"><a class="menu-desktop__link menu-device__link" href="#main-functions" data-lang="features">funkcje
+            </a></li>
+            <li class="menu__element menu__element-offer"><a class="menu-desktop__link menu-device__link" href="#offer" data-lang="offer">oferta</a></li>
+            <li class="menu__element menu__element-form"><a class="menu-desktop__link menu-device__link" href="#form">newsletter</a></li>
+            <li class="menu__element menu__element-about"><a class="menu-desktop__link menu-device__link" href="#about-us" data-lang="about us">o nas</a></li>
+            <li class="menu__element menu__element-translation">
+              <div class="lang-button" data-lang="<img src='img/flag_pl.png' height='30' width='40'/>">
+              <img src="img/flag_uk.png" height='30' width='40'/></div>
+          </li>
+      </div>
+    </nav>
+  
+    <section id="hero" class="hero">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class = "header__slide1">
+              <div class = "header__slide1__text">
+                <h1>Pizzerium</h1>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class = "header__slide2">
+              <div class = "header__slide2__text">
+                <h1 data-lang="Hungry?">Głodny?</h1>
+                <h2 data-lang="With our app you will order your favourite <span class='header__slide2__text--red'> pizza</span>!">Dzięki Pizzerium zamówisz swoją ulubioną <span class="header__slide2__text--red" data-lang="pizza">pizzę</span>!</h2>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class = "header__slide3">
+              <div class = "header__slide3__text">
+                <h1 data-lang="Don't miss out!">Nie przegap!</h1>
+                <h2 data-lang="Subscribe now and be the first one to get our app!">Zapisz się na premierę aplikacji!</h2>
+                <a href="#form"><div><h3 data-lang="Click here!">Kliknij tutaj!</h3></div></a>
+              </div>
+            </div>
+          </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+  
+    <div id="main-functions" class="main-functions">  
+      <section class="main-functions-container">
+        <h2 class="main-functions__heading" data-lang="With our app you can:">Z naszą aplikacją:</h2> 
+        <div class="main-functions__box">
+  
+        <figure class="main-function__img-container">
+          <img class="main-function__img" src="img/main-functions1.jpg">
+          <figcaption class="main-function__caption" data-lang="Create your own pizza">Skomponujesz swoją pizzę</figcaption>
+        </figure>
+  
+        <figure class="main-function__img-container">
+          <img class="main-function__img" src="img/main-functions2.jpg">
+          <figcaption class="main-function__caption" data-lang="Find a pizzeria">Znajdziesz pizzerię</figcaption>
+        </figure>
+      
+        <figure class="main-function__img-container">
+          <img class="main-function__img" src="img/main-functions3.jpg">
+          <figcaption class="main-function__caption" data-lang="Choose the best offer">Wybierzesz najlepszą ofertę</figcaption>
+        </figure>
+  
+        <figure class="main-function__img-container">
+          <img class="main-function__img" src="img/main-functions4.jpg">
+          <figcaption class="main-function__caption" data-lang="Eat pizza &lt;br&gt;😍">Zjesz pizzę<br> 😍 </figcaption>
+        </figure>
+      </section>
+    </div>
+  
+  
+    <div id="offer" class="all-functions">
+      <section class="all-functions__container">
+        <h2 class="all-functions__title" data-lang="Why our app is so cool?">Co fajnego oferujemy?</h2>
+    
+        <div class="all-functions__features">
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-hand-holding"></i>
+              <h3 class="feature__headline" data-lang="Choose ingredients">Wybierz składniki</h3>
+            </div>
+            <div class="feature__description" data-lang="Create your own pizza with your favourite ones.">Skomponuj pizzę ze swoich ulubionych składników.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-apple-alt"></i>
+              <h3 class="feature__headline">Vege pizza</h3>
+            </div>
+            <div class="feature__description" data-lang="We are vegan friendly.">Wybór pizzy ze specjalnych składników dla wegan.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-dollar-sign"></i>
+              <h3 class="feature__headline" data-lang="The best price">Najlepsza cena</h3>
+            </div>
+            <div class="feature__description" data-lang="Find your dream pizza at the best price.">Znajdź wymarzoną pizzę w najlepszej cenie w okolicy.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-map-marked-alt"></i>
+              <h3 class="feature__headline" data-lang="Find pizzeria">Znajdź pizzerię</h3>
+            </div>
+            <div class="feature__description" data-lang="Choose a local pizza place.">Wybierz pizzerię ze swojej okolicy.</div>
+          </div>
+        
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-check"></i>
+              <h3 class="feature__headline" data-lang="Only tried and tested">Sprawdzone lokale</h3>
+            </div>
+            <div class="feature__description" data-lang="We only work with the bests.">Promujemy tylko bezpieczne i sprawdzone lokale.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-car"></i>
+              <h3 class="feature__headline" data-lang="Place your order">Zamów danie</h3>
+            </div>
+            <div class="feature__description" data-lang="You can order your pizza directly to your house.">Możesz zamówić pizzę z dowozem do swojego domu.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon fas fa-concierge-bell"></i>
+              <h3 class="feature__headline" data-lang="Eat in">Zjedź na miejscu</h3>
+            </div>
+            <div class="feature__description" data-lang="You can eat your pizza in your favourite pizza place.">Zjedz swoją pizzę w lokalu ulubionej pizzeri.</div>
+          </div>
+    
+          <div class="feature">
+            <div class="feature__title">
+              <i class="feature__title--icon far fa-smile-beam"></i>
+              <h3 class="feature__headline" data-lang="Be happy!">Bądź szczęsliwy</h3>
+            </div>
+            <div class="feature__description" data-lang="Learn to love your pizza again.">Możesz się cieszyć z powodu smacznej pizzy.</div>
+              <!-- id="form" : scroll to form section from hero link [~ Mateusz] -->
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <h3 id="form" class="newsletter-heading">Newsletter</h3>
+  
+      <section class="form">
+        <h1 class="form__title" data-lang="Subscribe:">Zapisz się na premierę aplikacji:</h1><br>
+  
+        <form class="form__table" action="#" method="post" id="contactform" onsubmit="return validation();">
+          <div>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Twoje imię" data-langplaceholder="Your name">
+          </div>
+          <div id="iname" class="error"></div>
+          <div>
+            <input class="form__input" type="email" id="mail" name="mail" placeholder="Twój e-mail" data-langplaceholder="Your e-mail">
+          </div>
+          <div id="imail" class="error"></div>
+          <button class="form__input-send" type="submit" id="button" data-lang="Send">Wyślij</button>
+        </form>
+  
+          <br>
+        <p class="form__info" data-lang="* We will send you one email informing you about the release of our app. &lt;br&gt;Your personal data is safe with us - no worries 😊">* Zostanie wysłany jeden mail z informacją o premierze produktu.<br>Twoje dane są u nas bezpieczne - możesz spać spokojnie 😊</p>
+      </section>
+  
+  
+  
+      <div id="about-us" class="container__about__us">
+        <i class="title__about-us" data-lang="About us:">O nas:</i>
+  
+        <div class="persons__box">
+          <div class="overlay__about-us"> 
+            <img class="img__abouts-us" src="img/01.jpg" alt="R">
+            <a class="link" >
+                <i class="icon__letter"> R...</i>
+              <span class="icon">
+              <i href="http://www.google.com" class="icon-email" ></i>
+              <i class="icon-facebook-squared"></i>
+              <i class="icon-linkedin-circled"></i>
+  
+              <div class="describe__person" data-lang="Hi, my name is Remek and I'm a creative graphic designer and a big pizza fan :) My favourite pizza topping is cheese, corn, peppers and obviously some chicken.">Hej, jestem Remek, z zawodu kreatywny grafik komputerowy i fan pizzy :). Moja ulubiona pizza składa się z sera, kukurydzy, papryk i oczywiście kurczaka!</div></span></a>
+          </div>
+      
+  
+          <div class="overlay__about-us"> 
+            <img class="img__abouts-us" src="img/02.jpg" alt="O"></a>
+            <a class="link">
+              <i class="icon__letter"> ...O...</i>
+              <span class="icon">
+              <i class="icon-email"></i>
+              <i class="icon-facebook-squared"></i>
+              <i class="icon-linkedin-circled"></i>
+  
+              <div class="describe__person" data-lang="I'm Oskar and I enjoy spending time with my fiancée, playing drums and coding. I adore pizza with artichokes.">Jestem Oskar, najbardziej lubię spędzać wieczory z narzeczoną, grać na perkusji i kodować. Uwielbiam pizzę z karczochami</div></span></a>
+          </div>
+      
+    
+          <div class="overlay__about-us"> 
+            <img class="img__abouts-us" src="img/03.jpg" alt="M">
+            <a class="link">
+                <i class="icon__letter"> ...M...</i>
+              <span class="icon">
+                <i class="icon-email" ></i>
+                <i class="icon-facebook-squared"></i>
+                <i class="icon-linkedin-circled"></i>
+  
+                <div class="describe__person" data-lang="My name is Matuesz. In my free time I like to travel and study foreign languages. I like gyro pizza with prawns, mushrooms and onion.">Jestem Mateusz. W wolnych chwilach podróżuję i uczę się języków obcych. Moja ulubiona pizza to gyros z krewetkami, pieczarkami i cebulą.</div>
+              </span></a>
+          </div>
+            
+            
+            
+            <div class="overlay__about-us"> 
+                <a href="#"><img class="img__abouts-us" src="img/04.jpg" alt="A"></a>
+                <a class="link">
+                  <i class="icon__letter"> ...A!</i>
+                <span class="icon">
+                  <i class="icon-email"></i>
+                  <i class="icon-facebook-squared"></i>
+                  <i class="icon-linkedin-circled"></i>
+    
+                  <div class="describe__person" data-lang="I'm Asia. A qualified Montessori teacher and Front-End beginner. I never say no to good Margherita.">Nazywam się Asia. Jestem dyplomowanym nauczycielem Montessori i początkującym Front-End Developerem. Nigdy nie odmawiam dobrej Margherity.</div>
+              </span></a>
+              </div>
+  
+            
+              </div>
+        
+          </div>        
+          
+  
+      </div>
+    <footer>
+      <p>Designed by: Zespół ROMA ⓒ Wszelkie prawa zastrzeżone.</p>
+    </footer> 
+
+  </div>
+    
+  
+<!-- GAME -->
+<div class="game-container">
+  <div class="menu-container u--visible" id="menu">
+      <div class="menu" id="menuBox">
+          <h1 class="menu__title">Pizza Game</h1>
+          <ul>
+              <li class="menu__button" id="startGame" data-show="stagePlayerName" data-hide="menuBox">Start</li>
+              <li class="menu__button" id="scoresLink" data-show="scoresBox" data-hide="menuBox">Ranking</li>
+              <li class="menu__button" id="aboutLink" data-show="aboutBox" data-hide="menuBox">Instrukcja</li>
+              <li class="menu__button" id="exitGame" data-show="aboutBox" data-hide="menuBox">Wyjście</li>
+          </ul>
+          <div class="menu-img">
+          <img src="img/game/building-front-2-pizzerium.svg">
+          </div>
+      </div>
+      
+      <div class="slide-player-name u--visible u--blur-fadeout" id="stagePlayerName" data-show="menuBox" data-hide="stagePlayerName">
+              <div class="player-name-box">
+                  <label for="playerName">Nazwa gracza:</label>
+                  <input type="text" id="playerName" class="player-name" maxlength="10" />
+                  <button class="name__button" id="checkName">Rozpocznij grę</button>
+              </div>
+          </div>
+      
+      <div class="about u--visible u--blur-fadeout" id="aboutBox" data-show="menuBox" data-hide="aboutBox">
+          <h1 class="about__title">Zasady Gry</h1>
+          <div class="about__ button--teal button--about">
+              <p class="about__text">Złóż pizzę ze wskazanych składników i dowieź jeszcze ciepłą pod wybrany adres. Im szybciej to zrobisz, tym więcej punktów zdobędziesz.<br><br> W pierwszym etapie gry klikaj na właściwe składniki myszką, w drugim użyj klawiatury.</p></div>
+          <div class="about__img"><img src="img/game/arrows.png"></div>
+          <p class="about__text">P.S. Uważaj na grzyby!</p>
+      </div>
+
+      <div class="score u--visible u--blur-fadeout" id="scoresBox" data-show="menuBox" data-hide="scoresBox">
+          <h1 class="title">Twój wynik:</h1>
+          <div class="button button--teal button--scores">
+            <ol class="scoresElement" id="scoresList"></ol>
+          </div>
+        </div>
+  </div> 
+</div>
+
+<a href="#hero" class="back-to-top-button">&uarr;</a>
+
+
+<div id="cookies-message-container">    
+  <div id="cookies-message" data-lang="This website uses cookies, which make our service work better. These cookies expire in 30 days.&lt;br&gt;<img class='logo-cookies__logo' src='img/logo.svg' alt='pizzerium logo'>&lt;br&gt;<a href='javascript:WHCloseCookiesWindow();' id='accept-cookies-checkbox'>Ok, no problem!">Ta strona używa ciasteczek (cookies), dzięki którym nasz serwis może działać lepiej. Pliki cookies wygasają po 30 dniach.
+      <br/><img class="logo-cookies__logo" src="img/logo.svg" alt="pizzerium logo"> <br/>
+      <a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox" data-lang="Ok, no problem!">Rozumiem, dzięki!
+      </a> </div></div>
+
+<script src="js/back-to-top-button.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="js/cookies.js"></script>
+<script src="js/highlight-menu.js"></script>
+<script src="js/small-menu.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/form.js"></script>
+<script src="js/hero_carousel.js"></script>
+<script src="js/translation.js"></script> 
+<script src="js/game.js"></script>
+</body>
+</html>
