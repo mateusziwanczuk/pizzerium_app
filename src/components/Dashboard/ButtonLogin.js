@@ -2,7 +2,7 @@ import React, { Fragment, Component } from "react";
 import SignIn from '../Auth/SignIn'
 import Dialog from '@material-ui/core/Dialog';
 
-import "./styles.css"
+import "./dashboard.css"
 
 class LogInButton extends Component {
     state = {
@@ -22,10 +22,7 @@ class LogInButton extends Component {
         return (
             <Fragment>
                 <button 
-                    id="btn-login"
-                    type="button" 
-                    className="btn btn-outline-danger btn-lg btn-lg shadow p-3 mb-5 rounded"
-                    style={{ "width": "15rem", "margin": "1rem" }}
+                    className="dashboard__button"
                     onClick={ this.handleClickOpen }
                 >
                     Zaloguj się
