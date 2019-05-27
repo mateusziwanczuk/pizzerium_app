@@ -1,0 +1,497 @@
+* {
+    box-sizing: border-box;
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../img/game/background-image.png");
+    z-index: 999;
+    position: absolute;
+    line-height: normal;
+}
+
+/************** game starting page ***************/
+
+.game-container .menu-container {
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    background: grey;
+    height: 100%;
+    width: 100%;
+}
+
+.game-container .menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.game-container .menu__title {
+    font-size: 10rem;
+    text-align: center;
+    margin: 2rem 3rem 0.5rem;
+    text-shadow: 0 0 10px;
+    font-weight: 300;
+}
+
+.game-container .menu__button {
+    list-style: none;
+    height: 3.5rem;
+    width: 15rem;
+    padding: 0.2rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    background: rgba(255, 0, 0, 0.445);
+    margin: 1rem;
+    text-shadow: 0 0 0.2px;
+    box-shadow: 0 0 20px;
+    transition: outline 2s, box-shadow 2s, text-shadow 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.game-container .menu__button:hover {
+    box-shadow: 0px 5px 80px rgba(255, 0, 0, 0.445);
+    text-shadow: 0 0 20px;
+    outline-offset: 25px;
+}
+
+.game-container .name__button:hover {
+    box-shadow: 0px 5px 80px rgba(255, 0, 0, 0.445);
+    text-shadow: 0 0 20px;
+    outline-offset: 25px;
+}
+
+.game-container .menu-img {
+    align-self: center;
+}
+
+/**************** player name **************/
+
+.game-container .player-name-box {
+    width: 50vw;
+    height: 50vh;
+    color: rgb(26, 25, 25);
+    background-color: rgb(241, 205, 124);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 0 40px;
+    margin: 25% 49%;
+}
+
+.game-container .name__button {
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    height: 3.5rem;
+    width: 15rem;
+    padding: 0.2rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    background: rgba(173, 14, 14, 0.781);
+    margin: 1rem;
+    text-shadow: 0 0 0.2px;
+    box-shadow: 0 0 20px;
+    transition: outline 2s, box-shadow 2s, text-shadow 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.game-container label {
+    font-size: 4rem;
+}
+
+.game-container input {
+    font-size: 2rem;
+    width: 70%;
+}
+
+/**************** about game - instrukcja gry **************/
+
+.game-container .about, .game-container .score {
+    width: 50vw;
+    height: 70vh;
+    color: rgb(26, 25, 25);
+    background-color: rgb(241, 205, 124);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    box-shadow: 0 0 40px;
+    top: 15%;
+    left: 25%;
+    z-index: 10000;
+}
+
+.game-container .about__text {
+    font-size: 1.5rem;
+    padding: 0 2rem;
+}
+
+.game-container .about__img img {
+    width: 6rem;
+    height: 5rem;
+}
+
+.game-container .u--visible {
+    margin: 0 auto;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0);
+    transition: filter 1s, opacity 1s;
+}
+
+.game-container .u--blur-fadeout {
+    display: none;
+    filter: blur(30px);
+    opacity: 0;
+    transition: filter 1s, opacity 1s;
+}
+
+/**************** scores **************/
+
+.game-container .scores {
+    width: 54vw;
+    height: 40vh;
+    z-index: 10000;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    top: 20%;
+    right: 305;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    background-color: rgb(241, 205, 124);
+    font-weight: bold;
+    align-self: center;
+    font-family: 'VT323', monospace;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.699);
+}
+
+.game-container .save__button {
+    color: whitesmoke;
+    font-family: 'VT323', monospace;
+    height: 3.5rem;
+    width: 15rem;
+    padding: 0.2rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 0 auto;
+    background: rgba(173, 14, 14, 0.781);
+    text-shadow: 0 0 0.2px;
+    box-shadow: 0 0 20px;
+    transition: outline 2s, box-shadow 2s, text-shadow 2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.game-container .save__button:hover {
+    box-shadow: 0px 5px 80px rgba(255, 0, 0, 0.445);
+    text-shadow: 0 0 20px;
+    outline-offset: 25px;
+}
+
+.game-container .scoresElement {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.15;
+    padding-left: 3rem;
+    margin: 2rem 2rem 2rem 0;
+}
+
+.game-container .title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+@media (max-width: 416px) {
+    .game-container .menu-img {
+        display: none;
+    }
+    .game-container .menu__title {
+        font-size: 5rem;
+    }
+    .game-container .about__text {
+        font-size: 1rem;
+    }
+    .game-container .about__img {
+        display: none;
+    }
+}
+
+@media (min-width:567px) and (max-width: 850px) and (orientation: landscape) {
+    .game-container .about__text {
+        font-size: 1rem;
+    }
+    .game-container .about__img {
+        display: none;
+    }
+    .game-container .menu__title {
+        font-size: 8rem;
+    }
+    .game-container .menu__button {
+        height: 2.6rem;
+        line-height: 2rem;
+    }
+    .game-container .menu-img {
+        display: none;
+    }
+}
+
+/**************** 3 2 1 Pizza **************/
+
+.game-container .count-container-pizza {
+    background-image: url("../img/game/pizzagame.png");
+    background-position: center;
+    background-size: cover;
+    color: rgb(66, 66, 66);
+    display: flex;
+    flex-direction: column;
+    font-family: 'VT323', monospace;
+    font-size: 7rem;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+}
+
+.game-container .time {
+    position: absolute;
+    top: 10px;
+    font-size: 5rem;
+    letter-spacing: 4px;
+    font-weight: bold;
+    align-self: center;
+    font-family: 'VT323', monospace;
+    background-color: rgb(241, 205, 124);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.699);
+    width: 230px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.game-container .score-div {
+    width: 230px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    top: 10px;
+    right: 30px;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    background-color: rgb(241, 205, 124);
+    font-weight: bold;
+    align-self: center;
+    font-family: 'VT323', monospace;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.699);
+}
+
+.game-container .box {
+    position: relative;
+    background-image: url("../img/game/pizza.png");
+    width: 360px;
+    height: 360px;
+    top: -100px;
+}
+
+.game-container .ingredient {
+    position: absolute;
+    font-size: 4rem;
+    padding: 0.4rem;
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    top: -4rem;
+    line-height: 1;
+    left: calc(0%);
+    transition: all .5s;
+    transform: translateY(0);
+    transform: translateX(0);
+    z-index: 9999;
+}
+
+.game-container .wrong-action {
+    color: red;
+}
+
+.game-container .ingredients_box {
+    background: url('../img/game/notebook.png');
+    background-size: cover;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.699);
+    border-radius: 0 0 5px 5px;
+    margin-right: 2%;
+    padding-left: 1%;
+    width: 12%;
+    height: 22vh;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 2.2rem;
+}
+
+.game-container .wrong-click-animation {
+    animation: shake 0.3s cubic-bezier(.07, .19, .97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-1px);
+    }
+    20%, 80% {
+        transform: translateX(2px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-4px);
+    }
+    40%, 60% {
+        transform: translateX(4px);
+    }
+}
+
+/*********************************
+    STYLES FOR DELIVER GAME
+**********************************/
+
+:root {
+    --carPositionX: 0px;
+    --carPositionY: 0px;
+}
+
+.game-container .deliver-map {
+    width: 1120px;
+    height: 720px;
+    background: lightgray;
+    position: relative;
+    transform: scale(0.75);
+}
+
+.game-container .home {
+    background-image: url("../img/game/bulding-top-4.png");
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: black;
+}
+
+.game-container .car {
+    display: inline-block;
+    background-image: url("../img/game/delivery car.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: var(--carPositionY);
+    left: var(--carPositionX);
+    width: 80px;
+    height: 80px;
+    transition: top 0.5s, left 0.5s, transform 0.1s;
+    transform: rotate(90deg);
+}
+
+.game-container .deliver {
+    position: absolute;
+    background-image: url("../img/game/destination-icon.png");
+    width: 80px;
+    height: 80px;
+    z-index: 999999;
+    animation: jump 1s linear infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.game-container .wrong-way {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: red;
+    transition: all 0.1s;
+}
+
+.game-container .loser {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: black;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container .wrong-way {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: red;
+    transition: all 0.1s;
+}
+
+.game-container .winner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: green;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
