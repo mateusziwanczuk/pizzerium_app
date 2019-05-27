@@ -1,0 +1,205 @@
+.container__about__us {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    text-align: center;
+    color: #fff;
+    padding: 70px 0 70px 0;
+}
+
+.persons {
+    text-align: center;
+    padding: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.persons__box {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-family: 'Mali', cursive;
+    justify-content: space-evenly;
+}
+
+.persons p {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.title__about-us {
+    padding: 1rem 0 3rem 0;
+    font-size: 2.4rem;
+    text-align: center;
+    color: black;
+    font-style: normal;
+}
+
+/* Hover effects */
+
+.photo img {
+    transition: all 0.5s ease-in-out;
+}
+
+.img__abouts-us {
+    border-radius: 25px;
+    max-width: 270px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    align-content: center;
+    padding: 1rem;
+}
+
+.photo:hover img {}
+
+.overlay__about-us {
+    position: relative;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.overlay__about-us .link {
+    padding: 1rem;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #20955E;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 25px;
+    color: #fff;
+    padding: 1rem;
+}
+
+.overlay__about-us:hover .link {
+    opacity: 0.9;
+}
+
+.text__about-us {
+    display: block;
+    top: 5%;
+    position: relative;
+    font-size: 1rem;
+}
+
+.icon {
+    display: block;
+    top: 5%;
+    position: relative;
+    font-size: 2rem;
+}
+
+.icon p {
+    font-size: 1rem;
+}
+
+.icon__letter {
+    display: block;
+    top: 5%;
+    position: relative;
+    font-size: 2rem;
+}
+
+.icon__letter p {
+    font-size: 1rem;
+}
+
+.describe__person {
+    font-size: 1rem;
+    cursor: default
+}
+
+.name__person {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.icon-facebook-squared {
+    cursor: pointer;
+}
+
+.icon-email {
+    cursor: pointer;
+}
+
+.icon-linkedin-circled {
+    cursor: pointer;
+}
+
+@media (max-width: 986px) {
+    .persons__box {
+        flex: 1 23%;
+        margin: 0 1rem;
+    }
+    @media (max-width: 768px) {
+        .persons__box {
+            flex: 1 49%;
+            margin: 0 1rem;
+        }
+        .icon {
+            top: 0px;
+        }
+    }
+    @media (max-width: 1024px) {
+        .persons__box {
+            flex: 1 40%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        @media (max-width: 300px) {
+            .persons__box {
+                flex: 23%;
+                margin: 1 0.8rem;
+            }
+            .describe__person {
+                font-size: 0.8rem;
+            }
+            .icon-email {
+                display: none;
+            }
+            .icon-facebook-squared {
+                display: none;
+            }
+            .icon-linkedin-circled {
+                display: none;
+            }
+            .icon__letter {
+                font-size: 1rem;
+            }
+            .icon {
+                margin: 0;
+                font-size: 0.8rem;
+            }
+            /* if able to add
+
+
+.photo
+{
+    width: 450px;
+    height: 278px;
+    overflow: hidden;
+
+}
+
+.photo img
+{
+    transition: all 0.5s ease-in-out;
+}
+.photo:hover img
+{
+    -webkit-transform: scale(1.15) rotate(-5deg);
+    -ms-transform: scale(1.15) rotate(-5deg);
+    transform: scale(1.15) rotate(-5deg);
+}
