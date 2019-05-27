@@ -73,8 +73,8 @@ class Chart1 extends React.Component {
       datasets: [
         {
           label: "Nowi użytkownicy",
-          fillColor: "rgb(105,168,104)",
-          strokeColor: "rgb(101, 163, 100)",
+          fillColor: "#FDB45C",
+          strokeColor: "#FDB45C",
           pointColor: "rgb(238,193,90)",
           pointStrokeColor: "#fff",
           pointHighlightFill: "#fff",
