@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    padding: 4rem;
+    text-align: center;
+    width: 100vw;
+}
+
+.form__input {
+    border: 1px solid lightgrey;
+    height: 5ex;
+    margin: 1.5ex auto;
+    max-width: 40ch;
+    text-align: center;
+    width: 80%;
+}
+
+.form__input-send {
+    background: #facf62;    
+    border: none;
+    box-shadow: 0px 0px 10px lightgrey;
+    color: white;
+    height: 4ex;
+    margin: 1ex;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+    margin: 10px center;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizzerium Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/form.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/game.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="icon" 
+      type="image/png" 
+      href="https://img.icons8.com/color/48/000000/pizza.png"
+    >  
+    <link rel="icon" 
+      type="image/png" 
+      href="img/favicon.png"
+    >   
+</head>
+
+<body>
+  <div class="website">
+    <section class="form">
+      <form class="form__table" action="#" method="post" id="contactform" onsubmit="return validation();">
+        <div>
+          <input class="form__input" type="text" id="name" name="name" placeholder="Twoje imię" data-langplaceholder="Your name">
+        </div>
+        <div id="iname" class="error"></div>
+        <div>
+          <input class="form__input" type="email" id="mail" name="mail" placeholder="Twój e-mail" data-langplaceholder="Your e-mail">
+        </div>
+        <div id="imail" class="error"></div>
+        <button class="form__input-send" type="submit" id="button" data-lang="Send">Graj!</button>
+      </form>
+    </section>
+  </div>
+    
+  <!-- GAME -->
+  <div class="game-container">
+    <div class="menu-container u--visible" id="menu">
+        <div class="menu" id="menuBox">
+            <h1 class="menu__title">Pizza Game</h1>
+            <ul>
+                <li class="menu__button" id="startGame" data-show="stagePlayerName" data-hide="menuBox">Start</li>
+                <li class="menu__button" id="scoresLink" data-show="scoresBox" data-hide="menuBox">Ranking</li>
+                <li class="menu__button" id="aboutLink" data-show="aboutBox" data-hide="menuBox">Instrukcja</li>
+                <li class="menu__button" id="exitGame" data-show="aboutBox" data-hide="menuBox">Wyjście</li>
+            </ul>
+            <div class="menu-img">
+            <img src="img/game/building-front-2-pizzerium.svg">
+            </div>
+        </div>
+
+        <div class="slide-player-name u--visible u--blur-fadeout" id="stagePlayerName" data-show="menuBox" data-hide="stagePlayerName">
+                <div class="player-name-box">
+                    <label for="playerName">Nazwa gracza:</label>
+                    <input type="text" id="playerName" class="player-name" maxlength="10" />
+                    <button class="name__button" id="checkName">Rozpocznij grę</button>
+                </div>
+            </div>
+          
+        <div class="about u--visible u--blur-fadeout" id="aboutBox" data-show="menuBox" data-hide="aboutBox">
+            <h1 class="about__title">Zasady Gry</h1>
+            <div class="about__ button--teal button--about">
+                <p class="about__text">Złóż pizzę ze wskazanych składników i dowieź jeszcze ciepłą pod wybrany adres. Im szybciej to zrobisz, tym więcej punktów zdobędziesz.<br><br> W pierwszym etapie gry klikaj na właściwe składniki myszką, w drugim użyj klawiatury.</p></div>
+            <div class="about__img"><img src="img/game/arrows.png"></div>
+            <p class="about__text">P.S. Uważaj na grzyby!</p>
+        </div>
+
+        <div class="score u--visible u--blur-fadeout" id="scoresBox" data-show="menuBox" data-hide="scoresBox">
+            <h1 class="title">Twój wynik:</h1>
+            <div class="button button--teal button--scores">
+              <ol class="scoresElement" id="scoresList"></ol>
+            </div>
+          </div>
+    </div> 
+  </div>
+  <script src="js/form.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
