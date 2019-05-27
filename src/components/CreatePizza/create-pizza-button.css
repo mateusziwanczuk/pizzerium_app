@@ -1,0 +1,44 @@
+.custom-button {
+    width: 170px;
+    height: 55px;
+    margin: 0 auto;
+    padding: .4rem .5rem;
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.custom-button:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.custom-button:visited {
+    text-decoration: none;
+}
+
+.custom-button:focus {
+    text-decoration: none;
+}
+
+.create-pizza-button {
+    background: #cc3333;
+}
+
+.create-pizza-button:hover {
+    background: #a5182e;
+}
+
+.create-pizza-button:active {
+    background: black
+}
+
+.create-pizza-button:visited {
+    text-decoration: none;
+}
+
+.create-pizza-button:focus {
+    text-decoration: none;
+    background: #a5182e
+}

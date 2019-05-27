@@ -1,0 +1,94 @@
+[
+    {
+        "name": "ser",
+        "id": 1
+    },
+    {
+        "name": "oliwki",
+        "id": 2
+    },
+    {
+        "name": "szynka",
+        "id": 3
+    },
+    {
+        "name": "pieczarki",
+        "id": 4    
+    },
+    {
+        "name": "salami",
+        "id": 5    
+    },
+    {
+        "name": "papryka",
+        "id": 6    
+    },
+    {
+        "name": "rukola",
+        "id": 7    
+    },
+    {
+        "name": "cebula",
+        "id": 8    
+    },
+    {
+        "name": "pomidory",
+        "id": 9   
+    },
+    {
+        "name": "ananas",
+        "id": 10   
+    },
+    {
+        "name": "krewetki",
+        "id": 11   
+    },
+    {
+        "name": "gyros",
+        "id": 12   
+    },
+    {
+        "name": "bekon",
+        "id": 13   
+    },
+    {
+        "name": "pepperoni",
+        "id": 14   
+    },
+    {
+        "name": "jalapeno",
+        "id": 15   
+    },
+    {
+        "name": "kapary",
+        "id": 16   
+    },
+    {
+        "name": "kurczak",
+        "id": 17   
+    },
+    {
+        "name": "ser cheddar",
+        "id": 18   
+    },
+    {
+        "name": "ser Bleu d'Auvergne",
+        "id": 19   
+    },
+    {
+        "name": "karczochy",
+        "id": 20  
+    },
+    {
+        "name": "kukurydza",
+        "id": 21  
+    },
+    {
+        "name": "tuńczyk",
+        "id": 22  
+    },
+    {
+        "name": "kalmary",
+        "id": 23  
+    }
+]

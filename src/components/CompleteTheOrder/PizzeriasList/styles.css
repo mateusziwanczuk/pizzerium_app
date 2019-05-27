@@ -1,0 +1,8 @@
+/* custom styles from bootstrap */
+
+ .Pizzerias--list {
+  z-index: 2;
+  color: #fff;
+  background-color: #da3e3e;
+  border-color: #da3e3e;
+ }

@@ -1,0 +1,15 @@
+#btn-login:hover {
+ background-color: #cc3333;
+}
+
+#btn-register:hover {
+    background-color: #cc3333;
+}
+
+@media (min-width: 768px) {
+#title {
+    letter-spacing: 2rem;
+}
+}
+
+    

@@ -1,0 +1,39 @@
+.user__favourites__header {
+    background-color: white;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 3px;
+    padding: 3% 0;
+    color: #cc3333; 
+    letter-spacing: 0.3rem;
+    text-shadow: 0 0 5px lightgrey;
+    width: 100%;
+}
+
+.sc-ifAKCX, .cDUeoc { 
+/* favourites pizzerias container with header */
+    margin: 0 auto;
+    width: 80%;
+}
+
+.list-scrollbar {
+    padding: 0;
+    border-radius: 0;
+    border-top: none;
+}
+
+.user__favourites__pizzerias {
+    overflow: auto;
+}
+
+    .user__favourites__pizzerias img {
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+        padding: 2px;
+        width: 100%;
+    }
+
+    .user__favourites__pizzerias p {
+        color: rgb(90, 90, 90);
+        font-size: 1.2rem;
+        margin: 3%;
+    }

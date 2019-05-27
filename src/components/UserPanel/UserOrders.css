@@ -1,0 +1,23 @@
+.user__orders__container {
+    background: #FFFFFF;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1% auto;
+    max-height: 160px;
+    overflow: auto;
+    padding: 3% 0;
+    width: 80%;
+}
+
+    .user__orders__container h2 {
+        color: #cc3333; 
+        letter-spacing: 0.3rem;
+        text-shadow: 0 0 5px lightgrey;
+    }
+
+    .user__orders__container span {
+        color: rgb(177, 177, 177);
+    }

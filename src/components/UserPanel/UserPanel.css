@@ -1,0 +1,45 @@
+.user__container {
+    background: url(/img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    padding: 5%;
+    overflow: auto;
+    width: 100%;
+}
+
+.user__container__left, .user__container__right {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+@media (max-width: 800px) {
+    .user__container__left, .user__container__right {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .user__container {
+        padding: 0;
+    }
+    .user__container__left {
+        margin-top: 15%;
+    }
+    .user__container__right {
+        margin: 10% auto;
+    }
+    .user__sayhello__container {
+        margin: 0 auto;
+    }
+    .user__userdata__container__data {
+        width: 70%;
+    }
+}
