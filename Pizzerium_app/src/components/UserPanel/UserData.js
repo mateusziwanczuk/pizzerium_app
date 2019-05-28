@@ -126,6 +126,7 @@ class Nickname extends React.Component {
 	};
 
 	render() {
+		const { signOut } = this.props;
 		return (
 			<div className="user__userdata__container">
 				<h2>
@@ -183,7 +184,7 @@ class Nickname extends React.Component {
 					>
 						<span>Edytuj Profil</span>
 					</div>
-					<DeleteUser />
+					<DeleteUser signOut={signOut}/>
 				</div>
 			</div>
 		);

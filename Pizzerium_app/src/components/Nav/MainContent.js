@@ -28,7 +28,8 @@ const MainContent = props => {
 		makeOrder,
 		selectPreviousOrder,
 		cancelOrder,
-		orderPizzasFromMenu
+		orderPizzasFromMenu,
+		signOut
 	} = props;
 	return (
 		<Content>
@@ -45,7 +46,7 @@ const MainContent = props => {
 			/>
 			<Route
 				path="/user-panel"
-				render={() => <UserPanel user={user} setUserData={setUserData} />}
+				render={() => <UserPanel user={user} setUserData={setUserData} signOut={signOut} />}
 			/>
 			<Route
 				path="/create-pizza"

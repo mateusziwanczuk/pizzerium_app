@@ -2,6 +2,7 @@ import React from "react";
 import firebase from "firebase";
 import MainNav from "./components/Nav/MainNav";
 import { BrowserRouter } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import MainContent from "./components/Nav/MainContent";
 import styled from "styled-components";
 
@@ -116,6 +117,17 @@ class App extends React.Component {
 		});
 	};
 
+	signOut = () => {
+		firebase.auth().signOut();
+		window.localStorage.clear();
+		this.setState({
+			...this.state,
+			selectedPath: "/",
+			user: null
+		});
+		return <Redirect to="/dashboard" />;
+	};
+
 	render() {
 		const {
 			isPizzaSubmitted,
@@ -139,6 +151,7 @@ class App extends React.Component {
 						selectPreviousOrder={this.selectPreviousOrder}
 						cancelOrder={this.cancelOrder}
 						orderPizzasFromMenu={this.orderPizzasFromMenu}
+						signOut={this.signOut}
 					/>
 				</AppContainer>
 			</BrowserRouter>
