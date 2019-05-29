@@ -32,8 +32,8 @@ class Chart2 extends React.Component {
         const chart2Data = [
             {
                 value: this.state.otherOrders,
-                color:"#F7464A",
-                highlight: "#FF5A5E",
+                color:"#cc3333",
+                highlight: "#ec3737",
                 label: "Pizze z menu"
             },
             {
