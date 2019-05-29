@@ -83,7 +83,7 @@ class Chart1 extends React.Component {
         }
       ]
     };
-    return <BarChart className="chart" data={chartData} />;
+    return <BarChart className="chart" data={chartData} height={220} width={480} />;
   }
 }
 

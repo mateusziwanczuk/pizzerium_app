@@ -49,7 +49,7 @@ componentWillUnmount() {
             </div>
         }
         <div className="dashboard__charts">
-          <Chart />
+          <Chart /> 
           <Chart2 />
         </div>
       </div>

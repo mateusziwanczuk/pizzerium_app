@@ -40,7 +40,7 @@ class Chart2 extends React.Component {
                 label: "Pizze użytkowników"
             }
         ]
-    return <PieChart className="chart" data={chart2Data} />
+    return <PieChart className="chart" data={chart2Data} height={220}/>
  }
 }
 
