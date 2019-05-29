@@ -1,6 +1,8 @@
 import React from "react";
 import { db } from "../../App";
 
+import './dashboard.css'
+
 const BarChart = require("react-chartjs").Bar;
 
 class Chart1 extends React.Component {
@@ -83,7 +85,14 @@ class Chart1 extends React.Component {
         }
       ]
     };
-    return <BarChart className="chart" data={chartData} />;
+    const option = {
+      responsive: true
+    };
+    return <BarChart 
+      className="chart" 
+      data={chartData}
+      options={option}
+    />;
   }
 }
 

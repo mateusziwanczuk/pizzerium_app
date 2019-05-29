@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import firebase from "firebase";
 import ButtonRegister from "./ButtonRegister";
 import LogInButton from "./ButtonLogin";
-import Chart from './Chart'
+import Chart1 from './Chart'
 import Chart2 from './Chart2'
 import Logo from "react-svg";
 
@@ -40,17 +40,24 @@ componentWillUnmount() {
             />
           </div>
           <h3>Stwórz i zamów ulubioną pizzę!</h3>
+          {this.state.user 
+            ? null
+            : <div className="dashboard__buttons">
+                <LogInButton />
+                <ButtonRegister />
+              </div>
+          }
         </div>
-        {this.state.user 
-          ? null
-          : <div className="dashboard__buttons">
-              <LogInButton />
-              <ButtonRegister />
-            </div>
-        }
         <div className="dashboard__charts">
-          <Chart />
-          <Chart2 />
+          <div className="dashboard__chart-1">
+            <h6 className="dashboard__chart-1__head">Użytkownicy zarejestrowani w tym tygodniu</h6>
+            <Chart1 />
+          </div>
+          <div className="dashboard__chart-2">
+            <h6 className="dashboard__chart-2__head">Zamówione pizze</h6>
+            <br />
+            <Chart2 />
+          </div>
         </div>
       </div>
     );

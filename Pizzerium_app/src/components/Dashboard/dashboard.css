@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     overflow: auto;
 }
 
@@ -18,27 +18,27 @@
     text-shadow: 0 0 10px #ffffff;
     width: 80%;
 }
-
     .dashboard__header__main {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
-
     .dashboard__header h1 {
         color: #303641; 
         font-size: 6rem;
         letter-spacing: 2rem;
     }
-
     .dashboard__header h3 {
         color: #303641;
+        margin-bottom: 1rem;
     }
 
 .dashboard__buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
 }
 
     .dashboard__button {
@@ -47,19 +47,70 @@
         border-radius: 5px;
         color: white;
         letter-spacing: .4rem;
-        margin-top: 2rem;
+        margin: 1rem;
         padding: 1rem;
         text-transform: uppercase;
         width: 240px;
     }
-
         .dashboard__button:hover {
             background: #8a1e1e;
         }
 
 .dashboard__charts {
     display: flex;
-    justify-content: center;
-    margin: 5% auto;
-    width: 100%;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+    .dashboard__chart-1 {
+        margin: auto;
+        width: 35vw;
+    }
+    .dashboard__chart-1__head {
+        color: grey;
+        margin-bottom: 1rem;
+        padding-left: 4rem;
+        text-align: center;
+        text-shadow: 0px 0px 1px rgb(170, 170, 170);
+        text-transform: uppercase;
+    }
+    .dashboard__chart-2 {
+        margin: auto;
+        padding-bottom: 3%;
+        text-align: center; 
+        width: 30vw;
+    }
+    .dashboard__chart-2__head {
+        color: #F7464A;
+        text-shadow: 0px 0px 1px rgb(170, 170, 170);
+        text-transform: uppercase;
+    }
+
+
+@media (max-width: 960px) {
+    .dashboard__header h1 {
+        font-size: 10vw;
+        letter-spacing: .5rem;
+    }
+    .dashboard__container {
+        display: block;
+        padding: 15% 0;
+    }
+    .dashboard__charts {
+        display: block;
+    }
+        .dashboard__chart-1 {
+            margin: 8% auto 0 auto;
+            width: 70vw;
+        }
+        .dashboard__chart-2 {
+            margin: 8% auto 0 auto;
+            padding-bottom: 3%;
+            width: 50vw;
+        }
+}
+
+@media (max-width: 550px) {
+    .dashboard__buttons {
+        width: 100%;
+    }
 }

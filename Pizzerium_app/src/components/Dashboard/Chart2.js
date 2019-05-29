@@ -26,6 +26,9 @@ class Chart2 extends React.Component {
     }
     
     render() {
+        const option = {
+          responsive: true
+        };
         const chart2Data = [
             {
                 value: this.state.otherOrders,
@@ -40,8 +43,12 @@ class Chart2 extends React.Component {
                 label: "Pizze użytkowników"
             }
         ]
-    return <PieChart className="chart" data={chart2Data} />
- }
+        return <PieChart 
+                className="chart" 
+                data={chart2Data} 
+                options={option}
+        />
+    }
 }
 
 export default Chart2;
