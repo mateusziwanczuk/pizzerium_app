@@ -8,6 +8,11 @@
     width: 80%;
 }
 
+    .user__userdata__container img {
+        margin: 0 .7rem .5rem 0;
+        width: 2.5rem;
+    }
+
     .user__userdata__container h2 {
         color: #cc3333; 
         letter-spacing: 0.3rem;

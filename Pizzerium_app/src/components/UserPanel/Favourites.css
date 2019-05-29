@@ -9,6 +9,11 @@
     width: 100%;
 }
 
+    .user__favourites__header img {
+        margin: 0 1rem .5rem 0;
+        width: 2.5rem;
+    }
+
 .sc-ifAKCX, .cDUeoc { 
 /* favourites pizzerias container with header */
     margin: 0 auto;

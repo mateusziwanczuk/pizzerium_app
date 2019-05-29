@@ -57,24 +57,26 @@ class UserOrders extends React.Component {
 		return (
 			<div className="user__orders__container">
 				<h2>
-					<span role="img" aria-label="orders">
-						📋{" "}
-					</span>
+					<img src="img/orders-emoji.png" alt="order list emoji" />
 					Historia zamówień:
 				</h2>
-				{this.state.orders.length === 0 ? (
-					<span>Nie złożyłeś jeszcze żadnego zamówienia.</span>
-				) : (
-					this.state.orders.map(order => {
-						return (
-							<li key={Math.random()}>
-								{order.pizzeria.name} ({order.price} zł)
-								<br />
-								Kontakt: {order.pizzeria.contactInfo.phone}
-							</li>
-						);
-					})
-				)}
+				<div className="user__orders__container__list">
+					{this.state.orders.length === 0 ? (
+						<span>Nie złożyłeś jeszcze żadnego zamówienia.</span>
+						) : ( 
+						this.state.orders.map(order => {
+							return (
+								<li key={Math.random()}>
+									{order.pizzeria.name} ({order.price} zł)
+									<br />
+									<span className="user__orders__container__list-contact">
+										Kontakt: {order.pizzeria.contactInfo.phone}
+									</span>
+								</li>
+							);
+						}))
+					}
+				</div>
 			</div>
 		);
 	}

@@ -6,11 +6,27 @@
     flex-direction: column;
     justify-content: center;
     margin: 1% auto;
-    max-height: 160px;
-    overflow: auto;
     padding: 3% 0;
     width: 80%;
 }
+
+    .user__orders__container img { 
+        width: 1.8rem;
+        margin: 0 1rem .5rem 0;
+    }
+
+.user__orders__container__list {
+    margin: auto;
+    max-height: 100px;
+    overflow: auto;
+    padding: 0 3%;
+    text-align: left;
+    width: 60%;
+}
+
+    .user__orders__container__list span {
+        margin-left: 1.4rem;
+    }
 
     .user__orders__container h2 {
         color: #cc3333; 
@@ -21,3 +37,10 @@
     .user__orders__container span {
         color: rgb(177, 177, 177);
     }
+
+@media (max-width: 470px){
+    .user__orders__container__list {
+        margin-left: 15%;
+        width: 80%;
+    }
+}

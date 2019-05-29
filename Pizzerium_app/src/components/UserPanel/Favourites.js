@@ -167,9 +167,7 @@ class Favourites extends Component {
 		return (
 			<ListContainer>
 				<h2 className="user__favourites__header list-header">
-					<span role="img" aria-label="pizzeria">
-						🏠&nbsp;
-					</span>
+					<img src="img/pizzeria-emoji.png" alt="pizzeria emoji" />
 					Ulubione pizzerie:
 				</h2>
 				<ListWrapper className="list-scrollbar">

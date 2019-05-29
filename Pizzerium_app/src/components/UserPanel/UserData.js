@@ -130,9 +130,7 @@ class Nickname extends React.Component {
 		return (
 			<div className="user__userdata__container">
 				<h2>
-					<span role="img" aria-label="user">
-						👤{" "}
-					</span>
+					<img src="img/user-emoji.png" alt="user emoji" />
 					Twoje dane:
 				</h2>
 				<div className="user__userdata__container__data">
