@@ -62,19 +62,23 @@ class UserOrders extends React.Component {
 					</span>
 					Historia zamówień:
 				</h2>
-				{this.state.orders.length === 0 ? (
-					<span>Nie złożyłeś jeszcze żadnego zamówienia.</span>
-				) : (
-					this.state.orders.map(order => {
-						return (
-							<li key={Math.random()}>
-								{order.pizzeria.name} ({order.price} zł)
-								<br />
-								Kontakt: {order.pizzeria.contactInfo.phone}
-							</li>
-						);
-					})
-				)}
+				<div className="user__orders__container__list">
+					{this.state.orders.length === 0 ? (
+						<span>Nie złożyłeś jeszcze żadnego zamówienia.</span>
+						) : ( 
+						this.state.orders.map(order => {
+							return (
+								<li key={Math.random()}>
+									{order.pizzeria.name} ({order.price} zł)
+									<br />
+									<span className="user__orders__container__list-contact">
+										Kontakt: {order.pizzeria.contactInfo.phone}
+									</span>
+								</li>
+							);
+						}))
+					}
+				</div>
 			</div>
 		);
 	}
