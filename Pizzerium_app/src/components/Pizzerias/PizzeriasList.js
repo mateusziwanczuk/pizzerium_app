@@ -201,43 +201,6 @@ class PizzeriasList extends Component {
 		const { setItemToLS } = this.props;
 		return (
 			<div>
-				<form
-					onSubmit={e => e.preventDefault()}
-					style={{
-						display: "flex",
-						flexFlow: "column",
-						paddingTop: "2rem",
-						width: "100%"
-					}}
-				>
-					<label
-						style={{
-							fontSize: "1.7rem",
-							textAlign: "center",
-							padding: "3px"
-						}}
-					>
-						WYSZUKAJ PIZZERIĘ:
-						<br />
-						<input
-							className="pizzerias-filter-input"
-							type="text"
-							onChange={this.searchHandler}
-						/>
-					</label>
-					<span
-						style={{
-							background: "#f1cd7c",
-							width: "100%",
-							textAlign: "center",
-							padding: "4px",
-							marginBottom: "2%"
-						}}
-					>
-						Zacznij wpisywać nazwę pizzerii
-					</span>
-				</form>
-
 				<Container>
 					<Tab.Container
 						id="list-group-tabs-example list-group-tabs-pizzerias"
@@ -254,6 +217,12 @@ class PizzeriasList extends Component {
 						>
 							<Col sm={3}>
 								<ListGroup>
+									<input
+										className="pizzerias__container__input"
+										type="text"
+										placeholder="Wpisz nazwę pizzerii..."
+										onChange={this.searchHandler}
+									/>
 									{pizzerias
 										.filter(searchFor(this.state.term))
 										.map(pizzeria => {
