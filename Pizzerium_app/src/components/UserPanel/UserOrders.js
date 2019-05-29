@@ -57,9 +57,7 @@ class UserOrders extends React.Component {
 		return (
 			<div className="user__orders__container">
 				<h2>
-					<span role="img" aria-label="orders">
-						📋{" "}
-					</span>
+					<img src="img/orders-emoji.png" alt="order list emoji" />
 					Historia zamówień:
 				</h2>
 				<div className="user__orders__container__list">

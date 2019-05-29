@@ -7,6 +7,11 @@
     width: 80%;
 }
 
+.user__sayhello__container img {
+    margin-right: 1rem;
+    width: 3rem;
+}
+
 .user__sayhello__container h1 {
     color: #cc3333; 
     font-size: 3rem;

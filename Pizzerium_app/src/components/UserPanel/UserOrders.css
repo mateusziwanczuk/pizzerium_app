@@ -10,8 +10,13 @@
     width: 80%;
 }
 
+    .user__orders__container img { 
+        width: 1.8rem;
+        margin: 0 1rem .5rem 0;
+    }
+
 .user__orders__container__list {
-    margin: 3% auto;
+    margin: auto;
     max-height: 100px;
     overflow: auto;
     padding: 0 3%;

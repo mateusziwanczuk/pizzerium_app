@@ -55,9 +55,7 @@ class SayHello extends React.Component {
 		return (
 			<div className="user__sayhello__container">
 				<h1>
-					<span role="img" aria-label="pizza">
-						🍕{" "}
-					</span>
+					<img src="img/pizza-emoji.png" alt="pizza emoji" />
 					Witaj {this.state.user ? this.state.userFirstName : null}!
 				</h1>
 				<span>Data dołączenia: {this.state.authUserRegistered}</span>
