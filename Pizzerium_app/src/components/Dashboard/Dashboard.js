@@ -50,9 +50,12 @@ componentWillUnmount() {
         </div>
         <div className="dashboard__charts">
           <div className="dashboard__chart-1">
+            <h6 className="dashboard__chart-1__head">Użytkownicy zarejestrowani w tym tygodniu</h6>
             <Chart1 />
           </div>
           <div className="dashboard__chart-2">
+            <h6 className="dashboard__chart-2__head">Zamówione pizze</h6>
+            <br />
             <Chart2 />
           </div>
         </div>
