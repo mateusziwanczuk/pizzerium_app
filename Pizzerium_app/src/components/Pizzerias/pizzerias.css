@@ -6,12 +6,22 @@
 .pizzerias__container {
     background: url('/img/background.jpg');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     font-size: 1.2rem;
     height: 100%;
     justify-content: center;
     margin: 0 auto;
     overflow-x: hidden;
     width: 100%;
+}
+
+.pizzerias__container__input {
+    border: 1px solid #cc3333;
+    border-radius: 5px;
+    height: 50px;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .pizzeriasList__column__left {
@@ -66,14 +76,6 @@
         text-transform: uppercase;        
         width: 90px;
     }
-
-.pizzerias-filter-input:focus {
-    border: 2px dotted #cc3333;
-}
-
-.pizzerias-filter-input:focus {
-    outline: 0;
-}
 
 .showButton {
     cursor: pointer;
