@@ -13,6 +13,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { FaHeart } from "react-icons/fa";
 import Nav from "react-bootstrap/Nav";
 import { db } from "../../App";
+import Logo from 'react-svg'
 
 import "./pizzerias.css";
 
@@ -282,6 +283,10 @@ class PizzeriasList extends Component {
 															{pizzeria.contactInfo.website}
 														</a>
 													</div>
+													<Logo 
+														src="logo.svg"
+														svgStyle={{ marginTop: 20, width: 140, height: 100 }}
+													/>
 												</div>
 												<div className="pizzeriasList__column__right">
 													<h1>Menu:</h1>
