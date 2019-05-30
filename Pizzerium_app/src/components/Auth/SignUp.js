@@ -123,7 +123,7 @@ class SignUp extends React.Component {
                                 id="street" 
                                 name="street" 
                                 value={this.state.street} 
-                                onChange={this.handleChange} 
+                                onChange={this.handleChange}
                             />
                         </FormControl>
                         <FormControl margin="normal" required fullWidth>
@@ -155,6 +155,7 @@ class SignUp extends React.Component {
                             <Input 
                                 id="email__sign-up" 
                                 name="email"
+                                type="email"
                                 value={this.state.email} 
                                 onChange={this.handleChange} 
                             />

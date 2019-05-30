@@ -141,6 +141,7 @@ class Nickname extends React.Component {
 							type="text"
 							value={this.state.user ? this.state.user.street : ""}
 							onChange={this.editAddress}
+							maxLength={30}
 						/>
 						<button onClick={this.editUserData}>
 							<span role="img" aria-label="phone">
@@ -154,6 +155,7 @@ class Nickname extends React.Component {
 							type="text"
 							value={this.state.user ? this.state.user.city : ""}
 							onChange={this.editCity}
+							maxLength={30}
 						/>
 						<button onClick={this.editUserData}>
 							<span role="img" aria-label="phone">
@@ -167,6 +169,7 @@ class Nickname extends React.Component {
 							type="text"
 							value={this.state.user ? this.state.user.phone : ""}
 							onChange={this.editPhoneNum}
+							maxLength={30}
 						/>
 						<button onClick={this.editUserData}>
 							<span role="img" aria-label="phone">
