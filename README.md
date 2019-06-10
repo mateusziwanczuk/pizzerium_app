@@ -2,9 +2,6 @@
 
 This is the project developed during infoShare Academy bootcamp. 
 
-With Pizzerium App you can create and order your favourite pizza. 
-Choose ingredients, choose pizzeria, order, eat! 
-
 Authors:
 - Joanna Bykowska
 - Mateusz Iwańczuk
@@ -15,11 +12,32 @@ Currently this project is developed by myself. For this reason, this repository 
 If you want to see whole project history, go to ROMA's repo: https://github.com/infoshareacademy/jfdz10-roma-app 
 
 
-## Screenshots:
+## Pizzerium App:
+
+With Pizzerium App, you can create account, create and order your favourite pizza.
+Choose ingredients, choose pizzeria, order, eat! 
+
+Application is created in React Library with Firebase.
 
 > ![screenshots](/readme_img/app1.png?raw=true "Screenshot")
 
+> ![screenshots](/readme_img/app2.png?raw=true "Screenshot")
+
+> ![screenshots](/readme_img/app3.png?raw=true "Screenshot")
+
+
+## Pizzerium Website
+
 > ![screenshots](/readme_img/website.png?raw=true "Screenshot")
+
+
+## Pizzerium Game
+
+Let's play our game created by pure JavaScript code! 
+
+> ![screenshots](/readme_img/game2.png?raw=true "Screenshot")
+
+> ![screenshots](/readme_img/game3.png?raw=true "Screenshot")
 
 > ![screenshots](/readme_img/game1.png?raw=true "Screenshot")
 
