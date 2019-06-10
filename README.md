@@ -17,11 +17,11 @@ If you want to see whole project history, go to ROMA's repo: https://github.com/
 
 ## Screenshots:
 
-> ![screenshots](/readme_PrtSc/app1.png?raw=true "Screenshot")
+> ![screenshots](/readme_img/app1.png?raw=true "Screenshot")
 
-> ![screenshots](/readme_PrtSc/website.png?raw=true "Screenshot")
+> ![screenshots](/readme_img/website.png?raw=true "Screenshot")
 
-> ![screenshots](/readme_PrtSc/game1.png?raw=true "Screenshot")
+> ![screenshots](/readme_img/game1.png?raw=true "Screenshot")
 
 
 Project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
