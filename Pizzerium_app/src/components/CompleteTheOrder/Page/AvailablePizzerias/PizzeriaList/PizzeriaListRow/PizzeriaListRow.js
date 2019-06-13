@@ -13,6 +13,10 @@ const styles = theme => ({
 	contactInfo: {
 		width: "50%"
 	},
+	orderValue: {
+		color: "grey",
+		padding: "1rem 0"
+	},
 	button: {
 		width: 140,
 		height: 35,
@@ -94,10 +98,10 @@ const PizzeriaListRow = props => {
 					{pizzeria.contactInfo.address.city},{" "}
 					{pizzeria.contactInfo.address.postcode}
 				</p>
-				<p>Tel. {pizzeria.contactInfo.phone}</p>
+				<p>tel. {pizzeria.contactInfo.phone}</p>
 			</div>
 			<div className={classes.contactInfo}>
-				<h5>
+				<h5 className={classes.orderValue}>
 					Wartość zamówienia:{" "}
 					<span style={{ fontWeight: "bold" }}>
 						{price(pizzeria.availableIngredients)} zł

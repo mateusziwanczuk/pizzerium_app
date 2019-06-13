@@ -76,13 +76,22 @@ const styles = theme => ({
 	successPaper: {
 		position: "absolute",
 		top: "50%",
-		left: "50%",
+		left: "45%",
 		transform: "translate(-50%, -50%)",
 		textAlign: "center",
-		padding: "15px 15px",
+		padding: "50px 80px",
 		[theme.breakpoints.down("sm")]: {
-			width: "100%"
+			width: "100%",
+			left: "50%"
 		}
+	},
+	header1: {
+		color: "#cc3333",
+		padding: "1rem"
+	},
+	header2: {
+		color: "grey",
+		paddingBottom: "1rem"
 	}
 });
 
@@ -170,8 +179,12 @@ class CreatePizza extends Component {
 				}}
 			>
 				<Paper className={classes.successPaper}>
-					<h2>Potwierdziłeś wybrane składniki!</h2>
-					<h3>Przejdź do następnego kroku i wybierz pizzerię.</h3>
+					<h3 className={classes.header1}>
+						Potwierdziłeś wybrane składniki!
+					</h3>
+					<h4 className={classes.header2}>
+						Przejdź do następnego kroku i wybierz pizzerię.
+					</h4>
 					<Button
 						className="d-inline custom-button btn-secondary"
 						style={{

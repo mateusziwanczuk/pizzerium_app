@@ -27,7 +27,13 @@ class CustomPizzaHeader extends Component {
 
 		return (
 			<Fragment>
-				<h3 style={{ width: "100%" }}>Wybrana pizza:</h3>
+				<h3 style={{ 
+					width: "100%",
+					color: "#cc3333",
+					padding: "1rem" 
+				}}>
+					Wybrana pizza:
+				</h3>
 				<div
 					className="list-group-item list-group-item-action flex-column align-items-start"
 					style={{

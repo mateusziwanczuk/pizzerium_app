@@ -14,6 +14,10 @@ const styles = theme => ({
 		[theme.breakpoints.down("sm")]: {
 			height: "62vh"
 		}
+	},
+	header: {
+		padding: "2rem 1rem 1rem",
+		color: "#cc3333"
 	}
 });
 
@@ -39,7 +43,7 @@ const AvailablePizzerias = props => {
 
 	return (
 		<div className={classes.wrapper}>
-			<h3>Dostępne pizzerie:</h3>
+			<h3 className={classes.header}>Dostępne pizzerie:</h3>
 			<ListWrapper className={classes.list}>
 				<PizzeriaList
 					pizzerias={list}
