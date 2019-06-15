@@ -5,55 +5,70 @@ import firebase from "firebase";
 import Button from "react-bootstrap/Button";
 
 const styles = theme => ({
-	wrapper: {
+	container: {
+		height: "100%",
+		overflow: "auto",
+	},
+	wrappersContainer: {
 		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
+		flexWrap: "wrap",
+		justifyContent: "space-evenly",
+		padding: "4vh 4vw",
 		width: "100%",
-		maxHeight: "100vh",
-		overflow: "auto"
+	},
+	wrapperPriceAndButtons: {
+		display: "flex",
+		flexWrap: "wrap",
+		justifyContent: "space-evenly",
+		marginBottom: "10%",
+		width: "100%",
 	},
 	header: {
+		color: "#cc3333",
+		marginBottom: "2rem",
+		textAlign: "center",
 		width: "100%",
-		marginBottom: 15,
-		[theme.breakpoints.down("sm")]: {
-			textAlign: "center"
-		}
+	},
+	header3: {
+		color: "grey",
+		fontSize: 20,
+		letterSpacing: ".1rem",
+		padding: "1rem",
+		textAlign: "center",
 	},
 	ingredientsWrapper: {
-		maxWidth: 350,
-		width: "100%",
-		fontSize: 16
+		marginBottom: "2%",
+		width: "320px",
+	},
+	ingredientsContent: {
+		height: 330,
+		padding: 15,
 	},
 	pizzeriaWrapper: {
-		maxWidth: 350,
-		width: "100%",
-		marginTop: 15,
-		fontSize: 16
+		fontSize: 16,
+		marginBottom: "2%",
+		width: "320px",
 	},
-	pizzeria: {
+	pizzeriaContent: {
+		height: 330,
 		padding: 15,
 		textAlign: "center"
 	},
 	contactWrapper: {
-		maxWidth: 350,
-		width: "100%",
-		marginTop: 15,
-		fontSize: 16
+		fontSize: 16,
+		marginBottom: "2%",
+		width: "320px",
 	},
-	contact: {
+	contactContent: {
+		height: 330,
 		padding: 15,
 		textAlign: "center",
-		fontSize: 16
 	},
 	info: {
 		display: "block",
-		fontWeight: "bold"
 	},
 	priceContainer: {
-		maxWidth: 350,
-		width: "100%",
-		marginTop: 15,
+		width: "330px",
 		textAlign: "center"
 	},
 	favButton: {
@@ -85,15 +100,14 @@ const styles = theme => ({
 		}
 	},
 	makeOrderContainer: {
-		maxWidth: 350,
-		width: "100%",
-		marginTop: 15,
-		paddingBottom: 30
+		display: "flex",
+		flexDirection: "column",
+		justifyContent: "center",
+		width: "330px",
 	},
 	buttonsContainer: {
 		display: "flex",
 		justifyContent: "space-between",
-		width: "100%"
 	}
 });
 
@@ -229,122 +243,122 @@ class SummaryOrder extends Component {
 		const pizzasFromMenu = getFromLocalStorage("pizzasFromMenu");
 
 		return (
-			<div className={classes.wrapper}>
-				<h1 className={classes.header}>Podsumowanie zamówienia</h1>
-				{isOrderFromMenu ? (
-					<div className={classes.ingredientsWrapper}>
-						<h2>Wybrane pizze: </h2>
-						<div className={classes.ingredients}>
-							<ul>
-								{pizzasFromMenu.map((el, i) => {
-									return (
-										<li key={i} style={{ fontSize: 16 }}>
-											{el.name}
-										</li>
-									);
-								})}
-							</ul>
+			<div className={classes.container}>
+				<div className={classes.wrappersContainer}>
+					<h1 className={classes.header}>Podsumowanie zamówienia</h1>
+					{isOrderFromMenu ? (
+						<div className={classes.ingredientsWrapper}>
+							<h2>Wybrane pizze: </h2>
+							<div className={classes.ingredients}>
+								<ul>
+									{pizzasFromMenu.map((el, i) => {
+										return (
+											<li key={i} style={{ fontSize: 16 }}>
+												{el.name}
+											</li>
+										);
+									})}
+								</ul>
+							</div>
 						</div>
-					</div>
-				) : (
-					<div className={classes.ingredientsWrapper}>
-						<h2>Wybrane składniki: </h2>
-						<div className={classes.ingredients}>
-							<ul>
-								{ingredients.map((el, i) => {
-									return (
-										<li key={i} style={{ fontSize: 16 }}>
-											{el.name}
-										</li>
-									);
-								})}
-							</ul>
+					) : (
+						<div className={classes.ingredientsWrapper}>
+							<Paper className={classes.ingredientsContent}>
+								<h3 className={classes.header3}>
+									Wybrane składniki:
+								</h3>
+								<div className={classes.ingredients}>
+									<ul>
+										{ingredients.map((el, i) => {
+											return (
+												<li key={i} style={{ fontSize: 16 }}>
+													{el.name}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							</Paper>
 						</div>
-					</div>
-				)}
+					)}
 
-				<div className={classes.pizzeriaWrapper}>
-					<h2>Wybrana pizzeria: </h2>
-					<Paper className={classes.pizzeria}>
-						<h2>{pizzeria.name}</h2>
-						<p>
-							Adres:
-							<span className={classes.info}>
-								{pizzeria.contactInfo.address.street},
-								{pizzeria.contactInfo.address.postcode}
-								{pizzeria.contactInfo.address.city}
+					<div className={classes.pizzeriaWrapper}>
+						<Paper className={classes.pizzeriaContent}>
+							<h3 className={classes.header3}>Wybrana pizzeria:</h3>
+							<h4>{pizzeria.name}</h4>
+								<span className={classes.info} style={{ paddingBottom: "1rem" }}>
+									{pizzeria.contactInfo.address.street}
+									<br />
+									{pizzeria.contactInfo.address.postcode}&nbsp;
+									{pizzeria.contactInfo.address.city}
+								</span>
+								<span className={classes.info} style={{ paddingBottom: "1rem" }}>Telefon: {pizzeria.contactInfo.phone}</span>
+								<span className={classes.info}>
+									{pizzeria.contactInfo.website}
+								</span>
+						</Paper>
+					</div>
+					<div className={classes.contactWrapper}>
+						<Paper className={classes.contactContent}>
+							<h3 className={classes.header3}>Dane kontaktowe: </h3>
+							{user && (
+								<Fragment>
+									<p>
+										Imię i nazwisko:
+										<span className={classes.info}>{user.name}</span>
+									</p>
+									<p>
+										email:
+										<span className={classes.info}>{user.email}</span>
+									</p>
+									<p>
+										telefon:
+										<span className={classes.info}>{user.phone}</span>
+									</p>
+									<p>
+										Adres dostawy:
+										<span className={classes.info}>
+											{user.street}, {user.city}
+										</span>
+									</p>
+								</Fragment>
+							)}
+						</Paper>
+					</div>
+				</div>
+				<div className={classes.wrapperPriceAndButtons}>
+					<div className={classes.priceContainer}>
+						<h3 className={classes.header3}>
+							Wartość zamówienia:
+							<span style={{ display: "block", fontWeight: "bold", color: "#cc3333"}}>
+								{price} zł
 							</span>
-						</p>
-						<p>
-							telefon:
-							<span className={classes.info}>{pizzeria.contactInfo.phone}</span>
-						</p>
-						<p>
-							WWW:
-							<span className={classes.info}>
-								{pizzeria.contactInfo.website}
-							</span>
-						</p>
-					</Paper>
-				</div>
-				<div className={classes.contactWrapper}>
-					<h2>Dane kontaktowe: </h2>
-					<Paper className={classes.contact}>
-						{user && (
-							<Fragment>
-								<p>
-									Imię i nazwisko:
-									<span className={classes.info}>{user.name}</span>
-								</p>
-								<p>
-									email:
-									<span className={classes.info}>{user.email}</span>
-								</p>
-								<p>
-									telefon:
-									<span className={classes.info}>{user.phone}</span>
-								</p>
-								<p>
-									Adres dostawy:
-									<span className={classes.info}>
-										{user.street}, {user.city}
-									</span>
-								</p>
-							</Fragment>
-						)}
-					</Paper>
-				</div>
-				<div className={classes.priceContainer}>
-					<h3>
-						Wartość zamówienia:
-						<span style={{ display: "block", fontWeight: "bold" }}>
-							{price} zł
-						</span>
-					</h3>
-				</div>
-				<div className={classes.makeOrderContainer}>
-					<div className={classes.buttonsContainer}>
-						<Button
-							size="lg"
-							className={classes.favButton}
-							variant="link"
-							onClick={this.sendOrder}
-						>
-							Zamów
-						</Button>
-						<Button
-							size="lg"
-							className="d-inline custom-button btn-secondary"
-							style={{
-								width: 145,
-								height: 45,
-								padding: "5px 7px"
-							}}
-							onClick={this.cancelOrder}
-							variant="link"
-						>
-							Cofnij
-						</Button>
+						</h3>
+					</div>
+					<div className={classes.makeOrderContainer}>
+						<div className={classes.buttonsContainer}>
+							<Button
+								size="lg"
+								className={classes.favButton}
+								variant="link"
+								onClick={this.sendOrder}
+							>
+								Zamów
+							</Button>
+							<Button
+								size="lg"
+								className="d-inline custom-button btn-secondary"
+								style={{
+									width: 145,
+									height: 45,
+									padding: "5px 7px"
+								}}
+								onClick={this.cancelOrder}
+								variant="link"
+							>
+								Cofnij
+							</Button>
+						</div>
 					</div>
 				</div>
 			</div>

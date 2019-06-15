@@ -32,13 +32,22 @@ const styles = theme => ({
 	succesPaper: {
 		position: "absolute",
 		top: "50%",
-		left: "50%",
+		left: "45%",
 		transform: "translate(-50%, -50%)",
 		textAlign: "center",
-		padding: "15px 15px",
+		padding: "50px 80px",
 		[theme.breakpoints.down("sm")]: {
-			width: "100%"
+			width: "100%",
+			left: "50%"
 		}
+	},
+	header1: {
+		color: "#cc3333",
+		padding: "1rem"
+	},
+	header2: {
+		color: "grey",
+		paddingBottom: "1rem"
 	}
 });
 
@@ -154,8 +163,12 @@ class CompleteOrderPage extends Component {
 				}}
 			>
 				<Paper className={classes.succesPaper}>
-					<h2>Wybrałeś pizzerię!</h2>
-					<h3>Przejdź do następnego kroku i złóż zamówienie.</h3>
+					<h3 className={classes.header1}>
+						Już wybrałeś pizzerię.
+					</h3>
+					<h4 className={classes.header2}>
+						Przejdź do następnego kroku i złóż zamówienie.
+					</h4>
 					<Button
 						className="d-inline custom-button btn-secondary"
 						style={{
