@@ -8,6 +8,7 @@ const styles = theme => ({
 	container: {
 		height: "100%",
 		overflow: "auto",
+		paddingTop: "5%",
 	},
 	wrappersContainer: {
 		display: "flex",
@@ -248,18 +249,22 @@ class SummaryOrder extends Component {
 					<h1 className={classes.header}>Podsumowanie zamówienia</h1>
 					{isOrderFromMenu ? (
 						<div className={classes.ingredientsWrapper}>
-							<h2>Wybrane pizze: </h2>
-							<div className={classes.ingredients}>
-								<ul>
-									{pizzasFromMenu.map((el, i) => {
-										return (
-											<li key={i} style={{ fontSize: 16 }}>
-												{el.name}
-											</li>
-										);
-									})}
-								</ul>
-							</div>
+							<Paper className={classes.ingredientsContent}>
+								<h3 className={classes.header3}>
+									Wybrane pizze:
+								</h3>
+								<div className={classes.ingredients}>
+									<ul>
+										{pizzasFromMenu.map((el, i) => {
+											return (
+												<li key={i} style={{ fontSize: 16 }}>
+													{el.name}
+												</li>
+											);
+										})}
+									</ul>
+								</div>
+							</Paper>
 						</div>
 					) : (
 						<div className={classes.ingredientsWrapper}>
@@ -331,7 +336,7 @@ class SummaryOrder extends Component {
 						<h3 className={classes.header3}>
 							Wartość zamówienia:
 							<span style={{ display: "block", fontWeight: "bold", color: "#cc3333"}}>
-								{price} zł
+								{price.toFixed(2)} zł
 							</span>
 						</h3>
 					</div>
